@@ -16,13 +16,13 @@ struct ServerDataModel: Codable {
 struct ItemModel: Codable {
     var owner: ItemOwnerModel?
     //  var is_answered: Bool
-    var answerCount: Int
+    var answerCount: Int = 0
     var score: Int?
     var title: String
     var lastEditDate: Int?
     var creationDate: Int
     //    var question_id:Int
-    var isAnswered:Bool
+    var isAnswered:Bool?
     var answers: [Answer]?
 
     
@@ -68,13 +68,13 @@ struct Answer: Codable  {
     }
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        self.owner = try container.decode(ItemOwnerModel.self, forKey: .owner)
-        self.creationDate = try container.decode(Int.self, forKey: .creationDate)
+        self.owner = try? container.decode(ItemOwnerModel.self, forKey: .owner)
+        self.creationDate = try? container.decode(Int.self, forKey: .creationDate)
         self.body = try? container.decode(String.self, forKey: .body)
         if self.body != nil{
             htmlToString(htmlStr: &self.body!)
         }
-        self.voteCount = try container.decode(Int?.self, forKey: .voteCount) ?? 0
+        self.voteCount = try? container.decode(Int?.self, forKey: .voteCount) ?? 0
     }
     func htmlToString(htmlStr:inout String){
         let scanner:Scanner = Scanner(string: htmlStr);
@@ -108,7 +108,7 @@ struct ItemOwnerModel : Codable{
         let container = try decoder.container(keyedBy: CodingKeys.self)
         self.displayName = try? container.decode(String.self, forKey: CodingKeys.displayName)
         self.link = try? container.decode(String.self, forKey: CodingKeys.link)
-        self.reputation = try container.decode(Int.self, forKey: CodingKeys.reputation)
+        self.reputation = try? container.decode(Int.self, forKey: CodingKeys.reputation)
         self.isAccepted = try? container.decode(Bool.self, forKey: CodingKeys.isAccepted)
         self.userId = try? container.decode(Int.self, forKey: CodingKeys.userId)
     }

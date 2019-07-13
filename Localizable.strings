@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  test-app
+
+  Created by maxim mironov on 13/07/2019.
+  Copyright © 2019 maxim mironov. All rights reserved.
+*/
+"set tag" = "теги";
+"Opps..." = "Упп...";
+"Cancel" = "Закрыть";
+"downloading questions" = "загрузка вопросов";

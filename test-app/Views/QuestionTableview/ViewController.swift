@@ -27,9 +27,9 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         addTagButton()
         setGestures()
-       // self.urlSession = AlamofireApiServices.init(tag: property.tags[property.currentTagIndex], pageCount: property.itemsCountOnPage)
+        self.urlSession = AlamofireApiServices.init(tag: property.tags[property.currentTagIndex], pageCount: property.itemsCountOnPage)
         
-        self.urlSession = URLSessionApiSrevices.init(tag:  property.tags[property.currentTagIndex], pageCount: property.itemsCountOnPage)
+       // self.urlSession = URLSessionApiSrevices.init(tag:  property.tags[property.currentTagIndex], pageCount: property.itemsCountOnPage)
         loadData()
         pagingSpinner.hidesWhenStopped = true
         tableView.tableFooterView = UIView()
@@ -124,7 +124,7 @@ class ViewController: UIViewController {
         for a in alerts{
             message += "\(a)"
         }
-        let alertController = UIAlertController(title: "УУпс...)", message: message, preferredStyle: .alert)
+        let alertController = UIAlertController(title: "Opps...)", message: message, preferredStyle: .alert)
         let actionOk = UIAlertAction(title: "OK", style: .default) { (action:UIAlertAction) in
             okFunc()
         }
@@ -149,9 +149,9 @@ class ViewController: UIViewController {
     }
     
     @objc func goToSetTag()  {
-        //   self.property.currentTagIndex = Int.random(in: 1..<self.property.tags.count - 1)
-        //    loadData()
-        //return
+//           self.property.currentTagIndex = Int.random(in: 1..<self.property.tags.count - 1)
+//            loadData()
+//        return
         let storyboard = UIStoryboard(name: String(describing: SetTagViewController.self), bundle: nil)
         let vc = storyboard.instantiateInitialViewController() as! SetTagViewController
         vc.delegate = self
