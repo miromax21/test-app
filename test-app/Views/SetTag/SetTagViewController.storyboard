@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7j2-P3-d8C">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Set Tag View Controller-->
+        <scene sceneID="Az7-vn-ann">
+            <objects>
+                <viewController storyboardIdentifier="SetTagViewController" modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="7j2-P3-d8C" customClass="SetTagViewController" customModule="htc_weak_6" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sAY-bQ-bve">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MYU-lK-R2v" customClass="PopupUIView" customModule="htc_weak_6" customModuleProvider="target">
+                                <rect key="frame" x="15" y="66" width="384" height="227"/>
+                                <subviews>
+                                    <pickerView contentMode="scaleToFill" verticalCompressionResistancePriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="XVs-mP-23C">
+                                        <rect key="frame" x="5" y="5" width="374" height="155"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="155" id="lG5-lP-AgX"/>
+                                        </constraints>
+                                    </pickerView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E9T-GJ-6R2" customClass="FormButton" customModule="htc_weak_6" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="162" width="130" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="130" id="D8H-y0-Nwy"/>
+                                            <constraint firstAttribute="height" constant="60" id="HU2-Vl-Mge"/>
+                                        </constraints>
+                                        <state key="normal" title="cancel"/>
+                                        <connections>
+                                            <action selector="cancelPopup:" destination="7j2-P3-d8C" eventType="touchUpInside" id="jp8-FQ-WMa"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hbV-Qh-es7" customClass="FormButton" customModule="htc_weak_6" customModuleProvider="target">
+                                        <rect key="frame" x="246" y="162" width="130" height="54"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="130" id="c6A-XR-N2l"/>
+                                        </constraints>
+                                        <state key="normal" title="set "/>
+                                        <connections>
+                                            <action selector="setTag:" destination="7j2-P3-d8C" eventType="touchUpInside" id="6o9-Oy-7lh"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="E9T-GJ-6R2" firstAttribute="leading" secondItem="MYU-lK-R2v" secondAttribute="leading" constant="8" id="0KI-9e-7cM"/>
+                                    <constraint firstAttribute="trailing" secondItem="XVs-mP-23C" secondAttribute="trailing" constant="5" id="2yW-FV-zvk"/>
+                                    <constraint firstAttribute="trailing" secondItem="hbV-Qh-es7" secondAttribute="trailing" constant="8" id="FKn-Ka-lLz"/>
+                                    <constraint firstItem="XVs-mP-23C" firstAttribute="top" secondItem="MYU-lK-R2v" secondAttribute="top" constant="5" id="KZZ-Pp-0VS"/>
+                                    <constraint firstAttribute="bottom" secondItem="E9T-GJ-6R2" secondAttribute="bottom" constant="5" id="RyM-W9-1Lx"/>
+                                    <constraint firstAttribute="height" constant="227" id="T5a-TE-mcj"/>
+                                    <constraint firstItem="XVs-mP-23C" firstAttribute="leading" secondItem="MYU-lK-R2v" secondAttribute="leading" constant="5" id="W0i-4S-jMV"/>
+                                    <constraint firstAttribute="trailing" secondItem="XVs-mP-23C" secondAttribute="trailing" constant="5" id="WQR-96-HXb"/>
+                                    <constraint firstAttribute="trailing" secondItem="XVs-mP-23C" secondAttribute="trailing" constant="5" id="YK6-qI-7GE"/>
+                                    <constraint firstItem="XVs-mP-23C" firstAttribute="leading" secondItem="MYU-lK-R2v" secondAttribute="leading" constant="5" id="bon-pM-i2x"/>
+                                    <constraint firstItem="hbV-Qh-es7" firstAttribute="top" secondItem="XVs-mP-23C" secondAttribute="bottom" constant="2" id="h6g-oG-nUp"/>
+                                    <constraint firstItem="XVs-mP-23C" firstAttribute="top" secondItem="MYU-lK-R2v" secondAttribute="top" constant="5" id="ixH-q7-Ril"/>
+                                    <constraint firstItem="XVs-mP-23C" firstAttribute="leading" secondItem="MYU-lK-R2v" secondAttribute="leading" constant="5" id="mCy-V0-YOJ"/>
+                                    <constraint firstAttribute="bottom" secondItem="hbV-Qh-es7" secondAttribute="bottom" constant="11" id="xNQ-Pp-VXb"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.44296470207253891" green="0.44296470207253891" blue="0.44296470207253891" alpha="0.48850132042253519" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="MYU-lK-R2v" firstAttribute="leading" secondItem="a0x-c7-OcX" secondAttribute="leading" constant="15" id="LQG-fu-byy"/>
+                            <constraint firstItem="a0x-c7-OcX" firstAttribute="trailing" secondItem="MYU-lK-R2v" secondAttribute="trailing" constant="15" id="SZu-cU-beB"/>
+                            <constraint firstItem="MYU-lK-R2v" firstAttribute="top" secondItem="a0x-c7-OcX" secondAttribute="top" constant="22" id="bg7-qk-wPP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="a0x-c7-OcX"/>
+                    </view>
+                    <connections>
+                        <outlet property="pickerView" destination="XVs-mP-23C" id="kw3-sk-Lzy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DB5-M0-cOT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="11.594202898550726" y="184.82142857142856"/>
+        </scene>
+    </scenes>
+</document>
