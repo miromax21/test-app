@@ -185,6 +185,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate{
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        //for testing limit of downloading
         let outOfRange = items.count >= 30
         tableView.tableFooterView?.isHidden = outOfRange
         if indexPath.row == items.count - 1 && !outOfRange {

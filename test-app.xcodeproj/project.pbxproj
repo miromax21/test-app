@@ -57,12 +57,12 @@
 		1BA13E17229EC7AD00887CC9 /* rington.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = rington.mp3; sourceTree = "<group>"; };
 		1BC11D12229D793800DECDCF /* AnswerTableviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerTableviewCell.swift; sourceTree = "<group>"; };
 		1BC566DB22D9E0D900B7870B /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
-		1BC566DC22D9E0D900B7870B /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		1BC566DF22D9E0E300B7870B /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/SetTagViewController.strings; sourceTree = "<group>"; };
 		1BC566E022D9E11500B7870B /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/ShowDetailsController.strings; sourceTree = "<group>"; };
 		1BC566E122D9E1AD00B7870B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SetTagViewController.storyboard; sourceTree = "<group>"; };
 		1BC566E222D9E1CA00B7870B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ShowDetailsController.storyboard; sourceTree = "<group>"; };
 		1BC566E922D9E3D700B7870B /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		1BD2F65522DAF56D006E6730 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		65330558D2A0B54EF93D1D24 /* Pods_test_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_test_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F3F63C824AA4B55BEDAA349 /* Pods-test-app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-test-app.debug.xcconfig"; path = "Target Support Files/Pods-test-app/Pods-test-app.debug.xcconfig"; sourceTree = "<group>"; };
 		ECE92A6B2947BAC58B6FCD97 /* Pods-test-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-test-app.release.xcconfig"; path = "Target Support Files/Pods-test-app/Pods-test-app.release.xcconfig"; sourceTree = "<group>"; };
@@ -83,8 +83,8 @@
 		1B3855CD22787DFD0017CE00 = {
 			isa = PBXGroup;
 			children = (
-				1BC566E922D9E3D700B7870B /* Localizable.strings */,
 				1B3855D822787DFD0017CE00 /* test-app */,
+				1BD2F65122DAF2F7006E6730 /* localizations */,
 				1B3855D722787DFD0017CE00 /* Products */,
 				AC67BAFFA275DF69D47E690E /* Pods */,
 				E6F4214ED8A1C62F2779B50A /* Frameworks */,
@@ -207,6 +207,14 @@
 				1B99C6E6228AFB9D00B7CFB5 /* Protocols.swift */,
 			);
 			path = protocol;
+			sourceTree = "<group>";
+		};
+		1BD2F65122DAF2F7006E6730 /* localizations */ = {
+			isa = PBXGroup;
+			children = (
+				1BC566E922D9E3D700B7870B /* Localizable.strings */,
+			);
+			path = localizations;
 			sourceTree = "<group>";
 		};
 		AC67BAFFA275DF69D47E690E /* Pods */ = {
@@ -392,7 +400,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				1B3855E322787DFF0017CE00 /* Base */,
-				1BC566DC22D9E0D900B7870B /* ru */,
+				1BD2F65522DAF56D006E6730 /* ru */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";

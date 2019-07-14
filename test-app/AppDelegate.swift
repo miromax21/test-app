@@ -43,6 +43,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
     }
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+
+        let urlScheme = url.scheme
+        let urlComponents = NSURLComponents(url: url, resolvingAgainstBaseURL: false)
+        let items = (urlComponents?.queryItems) as [NSURLQueryItem]?
+        let appName = Bundle.main.infoDictionary?[kCFBundleNameKey as String] as? String
+        if (urlScheme  == appName) {
+            let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier:  "ViewController") as! ViewController
+            let rootViewController = self.window!.rootViewController
+            
+            let tag =  items?.first?.name == "tag" && items?.first?.value != "" ? items?.first?.value : "swift"
+            let index = vc.property.tags.firstIndex(of: items?.first?.name ?? tag!)
+            
+            vc.property.currentTagIndex = index ?? 0
+            rootViewController?.navigationController?.pushViewController(vc, animated: true)
+            
+            return true
+        }
+        return false
+    }
 }
 
 
